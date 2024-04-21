@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YO EREA CAMARERA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para la ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #fff; /* Cambiado a blanco */
+            z-index: 9999;
+            text-align: center;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+        #popupText {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .popup-button {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            width: 200px;
+        }
+        .popup-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <video id="landing-video" controls autoplay playsinline>
+        <source src="https://vidy.online/wp-content/uploads/2024/04/WhatsApp-Video-2024-04-06-at-10.54.43-AM.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <script>
+        var video = document.getElementById('landing-video');
+        var directLinkOpened = false;
+
+        // Verificar si hay una cookie guardada
+        var cookieValue = document.cookie.replace(/(?:(?:^|.;\s)directLinkOpened\s*\=\s*([^;]).$)|^.*$/, "$1");
+        if (cookieValue === "true") {
+            directLinkOpened = true;
+        }
+
+        // Evento para abrir el enlace cuando el usuario interactúa con el video
+        video.addEventListener('play', function() {
+            if (!directLinkOpened) {
+                openDirectLink();
+            }
+        });
+
+        // Función para abrir el enlace directo
+        function openDirectLink() {
+            // Cambia "tu-enlace" con la URL de tu enlace
+            var directLink = "https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1";
+            // Abre el enlace en la misma pestaña
+            window.location.href = directLink;
+            directLinkOpened = true;
+            // Guardar el estado en una cookie por 2 minutos
+            var expireDate = new Date();
+            expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
+            document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
+        }
+    </script>
+</div>
+
+<!-- Ventana emergente y overlay -->
+<div id="popup" class="popup">
+    <h2 id="popupText">¡⚠AVIDO DEL ADMINISTRADOR⚠!</h2>
+    <div id="popupContent">
+        <!-- Contenido editable de la ventana emergente -->
+        <p>"Hola, te pedimos que luego de ver el video, por favor, le des un like y compartas la publicación en Facebook. Y si es posible, que por favor dejes un comentario."</p>
+ <p>El motivo es para que el grupo sea más activo, Facebook le dé más alcance y el grupo siga creciendo."</p>
+ <h2 id="popupText">¡🙏TE LO AGRADESEREMOS🙏!</h2>
+<!-- Botón para cerrar la ventana emergente al hacer clic -->
+        <a href="#" class="popup-button" onclick="closePopup()">Ver Video</a>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+<script>
+    // Función para abrir la ventana emergente
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    // Función para cerrar la ventana emergente
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    // Llama a la función openPopup al cargar la página
+    window.onload = openPopup;
+
+    // Comprueba si hay cookies al cargar la página y establece la variable directLinkOpened en consecuencia
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf("directLinkOpened=") === 0) {
+            directLinkOpened = true;
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<script id="_wau671">var _wau = _wau || []; _wau.push(["dynamic", "wngghhrdf2jm64", "671", "ffffffffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
