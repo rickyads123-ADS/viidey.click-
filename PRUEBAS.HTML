@@ -26,13 +26,13 @@
             height: auto;
         }
         .cta-button {
+            display: none; /* Ocultamos el botón */
             background-color: #4CAF50;
             color: #fff;
             text-align: center;
             padding: 10px 20px;
             margin-top: 20px;
             text-decoration: none;
-            display: none; /* Ocultamos el botón por defecto */
         }
         .popup {
             display: none;
@@ -59,16 +59,12 @@
             font-size: 18px;
             margin-bottom: 20px;
         }
-        .popup-buttons {
-            display: flex;
-            justify-content: center;
-        }
         .popup-button {
             background-color: #4CAF50;
             color: #fff;
             text-align: center;
             padding: 10px 20px;
-            margin: 0 10px;
+            margin-top: 20px;
             text-decoration: none;
             border-radius: 5px;
         }
@@ -87,32 +83,39 @@
     <div class="popup" id="popup">
         <div class="popup-content">
             <div class="popup-message">
-                ¡Hazlo Viral La Publicacion! 
-          ¡Despues de ver el video comparte el video! 
+                ¡Haz clic en el botón para continuar viendo el video!
             </div>
-            <div class="popup-buttons">
-                <a href="#" id="close-popup" class="popup-button">No, gracias</a>
-                <a href="https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1" id="explore-button" class="popup-button" target="_blank">Explorar</a>
-            </div>
+            <a href="#" id="watch-video-button" class="popup-button">¡Ver Video!</a>
         </div>
     </div>
     <script>
-        // Mostrar la ventana emergente al cargar la página
+        var video = document.getElementById('landing-video');
+        var directLinkOpened = false;
+
+        // Verificar si hay una cookie guardada
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (cookieValue === "true") {
+            directLinkOpened = true;
+        }
+
+        // Evento para abrir la ventana emergente al cargar la página
         window.onload = function() {
             var popup = document.getElementById('popup');
-            var closeButton = document.getElementById('close-popup');
+            var watchVideoButton = document.getElementById('watch-video-button');
 
             popup.style.display = 'block';
 
-            closeButton.addEventListener('click', function(event) {
+            watchVideoButton.addEventListener('click', function(event) {
                 event.preventDefault();
                 popup.style.display = 'none';
+                video.play(); // Reproducir el video
+                directLinkOpened = true;
                 // Guardar el estado en una cookie por 2 minutos
                 var expireDate = new Date();
                 expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
-                document.cookie = "popupShown=true; expires=" + expireDate.toUTCString() + "; path=/";
+                document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
             });
-        }
+        };
     </script>
 </div>
 
