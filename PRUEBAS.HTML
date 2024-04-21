@@ -1,5 +1,4 @@
 
-Copy code
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -72,25 +71,8 @@ Copy code
         </div>
     </div>
     <script>
-        var video = document.getElementById('landing-video');
-        var directLinkOpened = false;
-
-        // Verificar si hay una cookie guardada
-        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        if (cookieValue === "true") {
-            directLinkOpened = true;
-        }
-
-        // Evento para abrir el enlace cuando el usuario interactúa con el video
-        video.addEventListener('play', function() {
-            if (!directLinkOpened) {
-                openDirectLink();
-            }
-        });
-
-        // Función para abrir el enlace directo
-        function openDirectLink() {
-            // Abre la ventana emergente
+        // Mostrar la ventana emergente al cargar la página
+        window.onload = function() {
             var popup = document.getElementById('popup');
             var closeButton = document.getElementById('close-popup');
 
