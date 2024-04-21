@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL FIEJO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para la ventana emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 2px solid #333;
+            background-color: #fff; /* Cambiado a blanco */
+            z-index: 9999;
+            text-align: center;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+        #popupText {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .popup-button {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            width: 200px;
+        }
+        .popup-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <video id="landing-video" controls autoplay playsinline>
+        <source src="https://cdn.videy.co/TwB8a3Kb.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+</div>
+
+<!-- Ventana emergente y overlay -->
+<div id="popup" class="popup">
+    <h2 id="popupText">¡⚠AVIDO DEL ADMINISTRADOR⚠!</h2>
+    <div id="popupContent">
+        <!-- Contenido editable de la ventana emergente -->
+        <p>"Hola, te pedimos que luego de ver el video, por favor, le des un like y compartas la publicación en Facebook. Y si es posible, que por favor dejes un comentario."</p>
+        <p>El motivo es para que el grupo sea más activo, Facebook le dé más alcance y el grupo siga creciendo."</p>
+        <h2 id="popupText">¡🙏TE LO AGRADESEREMOS🙏!</h2>
+        <!-- Botón para cerrar la ventana emergente al hacer clic -->
+        <a href="#" class="popup-button" onclick="playVideo()">Ver Video</a>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+<script>
+    // Función para abrir la ventana emergente
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    // Función para cerrar la ventana emergente
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    // Función para reproducir el video al hacer clic en el botón "Ver Video"
+    function playVideo() {
+        var video = document.getElementById("landing-video");
+        video.play();
+        closePopup(); // Cerrar la ventana emergente después de reproducir el video
+    }
+
+    // Llama a la función openPopup al cargar la página
+    window.onload = openPopup;
+</script>
+
+</body>
+</html>
+
+<script id="_wau671">var _wau = _wau || []; _wau.push(["dynamic", "wngghhrdf2jm64", "671", "ffffffffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
