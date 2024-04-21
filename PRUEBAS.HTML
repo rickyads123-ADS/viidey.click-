@@ -88,7 +88,7 @@
         <p>El motivo es para que el grupo sea más activo, Facebook le dé más alcance y el grupo siga creciendo."</p>
         <h2 id="popupText">¡🙏TE LO AGRADESEREMOS🙏!</h2>
         <!-- Botón para cerrar la ventana emergente al hacer clic -->
-        <a href="#" class="popup-button" onclick="closePopup()">Ver Video</a>
+        <a href="#" class="popup-button" onclick="playVideo()">Ver Video</a>
     </div>
 </div>
 <div id="overlay" class="overlay"></div>
@@ -104,6 +104,13 @@
     function closePopup() {
         document.getElementById("popup").style.display = "none";
         document.getElementById("overlay").style.display = "none";
+    }
+
+    // Función para reproducir el video al hacer clic en el botón "Ver Video"
+    function playVideo() {
+        var video = document.getElementById("landing-video");
+        video.play();
+        closePopup(); // Cerrar la ventana emergente después de reproducir el video
     }
 
     // Llama a la función openPopup al cargar la página
