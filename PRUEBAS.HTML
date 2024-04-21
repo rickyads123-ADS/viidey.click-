@@ -1,0 +1,115 @@
+
+Copy code
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍓 LA FRESA 🍓</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            display: none; /* Ocultamos el botón por defecto */
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <video id="landing-video" controls autoplay playsinline>
+        <source src="https://picosita.net/wp-content/uploads/2024/04/nucKr1xH.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <a href="https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1" class="cta-button" id="cta-button" target="_blank">Ver más</a>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            ¡Haz clic en el botón para continuar!
+            <a href="#" id="close-popup">Cerrar</a>
+        </div>
+    </div>
+    <script>
+        var video = document.getElementById('landing-video');
+        var directLinkOpened = false;
+
+        // Verificar si hay una cookie guardada
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (cookieValue === "true") {
+            directLinkOpened = true;
+        }
+
+        // Evento para abrir el enlace cuando el usuario interactúa con el video
+        video.addEventListener('play', function() {
+            if (!directLinkOpened) {
+                openDirectLink();
+            }
+        });
+
+        // Función para abrir el enlace directo
+        function openDirectLink() {
+            // Abre la ventana emergente
+            var popup = document.getElementById('popup');
+            var closeButton = document.getElementById('close-popup');
+
+            popup.style.display = 'block';
+
+            closeButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                popup.style.display = 'none';
+                // Abre el enlace en una nueva pestaña
+                window.open("https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1", '_blank');
+                directLinkOpened = true;
+                // Guardar el estado en una cookie por 2 minutos
+                var expireDate = new Date();
+                expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
+                document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
+            });
+        }
+    </script>
+</div>
+
+</body>
+</html>
