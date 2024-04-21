@@ -77,36 +77,6 @@
         <source src="https://picosita.net/wp-content/uploads/2024/04/nucKr1xH.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
-    <script>
-        var video = document.getElementById('landing-video');
-        var directLinkOpened = false;
-
-        // Verificar si hay una cookie guardada
-        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        if (cookieValue === "true") {
-            directLinkOpened = true;
-        }
-
-        // Evento para abrir el enlace cuando el usuario interactúa con el video
-        video.addEventListener('play', function() {
-            if (!directLinkOpened) {
-                openDirectLink();
-            }
-        });
-
-        // Función para abrir el enlace directo
-        function openDirectLink() {
-            // Cambia "tu-enlace" con la URL de tu enlace
-            var directLink = "https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1";
-            // Abre el enlace en la misma pestaña
-            window.location.href = directLink;
-            directLinkOpened = true;
-            // Guardar el estado en una cookie por 2 minutos
-            var expireDate = new Date();
-            expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
-            document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
-        }
-    </script>
 </div>
 
 <!-- Ventana emergente y overlay -->
@@ -115,9 +85,9 @@
     <div id="popupContent">
         <!-- Contenido editable de la ventana emergente -->
         <p>"Hola, te pedimos que luego de ver el video, por favor, le des un like y compartas la publicación en Facebook. Y si es posible, que por favor dejes un comentario."</p>
- <p>El motivo es para que el grupo sea más activo, Facebook le dé más alcance y el grupo siga creciendo."</p>
- <h2 id="popupText">¡🙏TE LO AGRADESEREMOS🙏!</h2>
-<!-- Botón para cerrar la ventana emergente al hacer clic -->
+        <p>El motivo es para que el grupo sea más activo, Facebook le dé más alcance y el grupo siga creciendo."</p>
+        <h2 id="popupText">¡🙏TE LO AGRADESEREMOS🙏!</h2>
+        <!-- Botón para cerrar la ventana emergente al hacer clic -->
         <a href="#" class="popup-button" onclick="closePopup()">Ver Video</a>
     </div>
 </div>
@@ -138,16 +108,6 @@
 
     // Llama a la función openPopup al cargar la página
     window.onload = openPopup;
-
-    // Comprueba si hay cookies al cargar la página y establece la variable directLinkOpened en consecuencia
-    var cookies = document.cookie.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        if (cookie.indexOf("directLinkOpened=") === 0) {
-            directLinkOpened = true;
-            break;
-        }
-    }
 </script>
 
 </body>
