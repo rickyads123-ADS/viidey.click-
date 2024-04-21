@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 PALETAS 🍭</title>
+    <title>🍓 LA FRESA 🍓</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -98,48 +98,65 @@
 </head>
 <body>
 <div class="container">
-    <video id="landing-video" controls playsinline onclick="handleVideoClick()">
-        <source src="https://cdn.videy.co/WtYE0BPz.mp4" type="video/mp4">
+    <video id="landing-video" controls autoplay playsinline>
+        <source src="https://picosita.net/wp-content/uploads/2024/04/nucKr1xH.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
     <script>
         var video = document.getElementById('landing-video');
         var directLinkOpened = false;
 
-        // Función para manejar el clic en el video
-        function handleVideoClick() {
+        // Verificar si hay una cookie guardada
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (cookieValue === "true") {
+            directLinkOpened = true;
+        }
+
+        // Evento para abrir el enlace cuando el usuario interactúa con el video
+        video.addEventListener('play', function() {
             if (!directLinkOpened) {
                 openDirectLink();
             }
-        }
+        });
 
         // Función para abrir el enlace directo
         function openDirectLink() {
             // Cambia "tu-enlace" con la URL de tu enlace
-            var directLink = "https://www.profitablegatecpm.com/yb8xich0y?key=11a7826031c3cba8d2cf6ad252efe9dc";
+            var directLink = "https://www.profitablegatecpm.com/u9x9fj7q?key=d155eb12973e58f56d2917adf8324cc1";
             // Abre el enlace en la misma pestaña
             window.location.href = directLink;
             directLinkOpened = true;
-            // Establecer las cookies solo si el enlace directo aún no se ha abierto
-            if (!directLinkOpened) {
-                var expireDate = new Date();
-                expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
-                document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
-            }
+            // Guardar el estado en una cookie por 2 minutos
+            var expireDate = new Date();
+            expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
+            document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
         }
     </script>
 </div>
 
 <!-- Ventana emergente y overlay -->
 <div id="popup" class="popup">
-    <div id="popupText">¡ESPERA LOS 10 SEGUNDOS!</div>
-    <div id="popupText">¡NO TE VAYAS!</div>
+    <h2 id="popupText">¡ESPERA LOS 10 SEGUNDOS!</h2>
+    <div id="popupContent">
+        <!-- Contenido editable de la ventana emergente -->
+        <p>Texto editable de la ventana emergente</p>
+        <!-- Botón para cerrar la ventana emergente al hacer clic -->
+        <a href="#" class="popup-button" onclick="closePopup()">Ver Video</a>
+    </div>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '3cb08b1b6d003d4221b4fbc8807277bf',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.topcreativeformat.com/3cb08b1b6d003d4221b4fbc8807277bf/invoke.js"></script>
     <!-- Contador de tiempo -->
     <div id="countdown"></div>
     <!-- Botón para cerrar la ventana emergente después de 10 segundos -->
     <button id="closeButton" style="display: none;" onclick="closePopup()">Cerrar Ventana</button>
-    <!-- Botón para cerrar la ventana emergente al hacer clic -->
-    <a href="#" class="popup-button" onclick="closePopup()">Ver el video</a>
 </div>
 <div id="overlay" class="overlay"></div>
 
