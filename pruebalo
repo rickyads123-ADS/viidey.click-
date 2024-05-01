@@ -1,78 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JULIETA DIAS ❤️🥰</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        video {
-            width: 100%;
-            height: auto;
-        }
-        .cta-button {
-            display: none; /* Ocultamos el botón */
-            background-color: #4CAF50;
-            color: #fff;
-            text-align: center;
-            padding: 10px 20px;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Video</title>
 </head>
 <body>
-<div class="container">
-    <video id="landing-video" controls autoplay playsinline>
-        <source src="https://otubex.com/media/videos/mp4/3665_480p.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
-    <script>
-        var video = document.getElementById('landing-video');
-        var directLinkOpened = false;
+  <h1>¡Bienvenido a la Página de Video!</h1>
+  <p>Disfruta del video a continuación:</p>
+  
+  <!-- Aquí colocamos el video -->
+  <video width="640" height="360" controls>
+    <source src="https://otubex.com/media/videos/mp4/3665_480p.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
 
-        // Verificar si hay una cookie guardada
-        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)directLinkOpened\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        if (cookieValue === "true") {
-            directLinkOpened = true;
-        }
+  <p>¿Te gustó el video? ¡Suscríbete para más contenido!</p>
 
-        // Evento para abrir el enlace cuando el usuario interactúa con el video
-        video.addEventListener('play', function() {
-            if (!directLinkOpened) {
-                openDirectLink();
-            }
-        });
-
-        // Función para abrir el enlace directo
-        function openDirectLink() {
-            // Cambia "tu-enlace" con la URL de tu enlace
-            var directLink = "https://tauphaub.net/4/7337625";
-            // Abre el enlace en la misma pestaña
-            window.location.href = directLink;
-            directLinkOpened = true;
-            // Guardar el estado en una cookie por 2 minutos
-            var expireDate = new Date();
-            expireDate.setTime(expireDate.getTime() + (2 * 60 * 1000)); // 2 minutos
-            document.cookie = "directLinkOpened=true; expires=" + expireDate.toUTCString() + "; path=/";
-        }
-    </script>
-</div>
+  <!-- Puedes agregar más contenido aquí, como un formulario de suscripción o enlaces a redes sociales -->
 
 </body>
 </html>
