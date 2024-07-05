@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video hhen Vivo</title>
+    <title>Video en Vivo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,7 +47,7 @@
 </head>
 <body>
     <div class="form-container">
-        <input type="text" id="videoURL" placeholder="Introduce la URL del video">
+        <input type="text" id="videoURL" placeholder="Introduce la URL del video en vivo de Facebook">
         <input type="button" value="Cargar Video" onclick="loadVideo()">
     </div>
     <div class="video-container">
@@ -56,14 +56,16 @@
 
     <script>
         function loadVideo() {
-            const url = document.getElementById('videoURL').value;
+            let url = document.getElementById('videoURL').value;
             const videoFrame = document.getElementById('videoFrame');
 
-            // Validar URL
-            if (url) {
+            // Validar y transformar la URL para obtener el formato correcto de embed
+            if (url.includes('facebook.com')) {
+                url = url.replace("www.facebook.com", "www.facebook.com/plugins/video.php?href=");
+                url += "&show_text=0&width=560";
                 videoFrame.src = url;
             } else {
-                alert('Por favor, introduce una URL válida.');
+                alert('Por favor, introduce una URL válida de Facebook.');
             }
         }
     </script>
